@@ -1,0 +1,19 @@
+let name = 'siri';
+let allVowels = ['a', 'e', 'i', 'o', 'u'];
+let obj = {};
+let missingVowels = [];
+
+// Count vowels in name
+for (let i = 0; i < name.length; i++) {
+  if (allVowels.includes(name[i])) {
+    obj[name[i]] = true;
+  }
+}
+for (let i = 0; i < allVowels.length; i++) {
+  if (!obj[allVowels[i]]) {
+    missingVowels.push(allVowels[i]);
+  }
+}
+
+console.log(missingVowels);
+
